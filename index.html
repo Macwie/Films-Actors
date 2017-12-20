@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Filmy & Aktorzy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="menu">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Filmy & Aktorzy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Filmy <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aktorzy</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Zarządzaj
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Dodaj film</a>
+                <a class="dropdown-item" href="#">Dodaj aktora</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <h3>Filmy</h3>
+      <div class="film">
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <div class="filmCover">
+                <img src="http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg" class="img-responsive" alt="Responsive image" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="filmInfo">
+                <h5>Tytuł: Ocean's 8</h5> Reżyser: <b>Gary Ross</b>
+                <br> Gatunek: <b>Komedia</b>
+                <br> Kraj produkcji: <b>USA</b><br> Premiera: <b>22 czerwca 2018</b>
+              </div>
+            </div>
+            <div class="col">
+              <div class="filmActors">
+                <h6>Aktorzy:<br></h6> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <div class="filmButtons">
+                  <button type="button" class="btn btn-default btn-sm">
+                  <span class="fa fa-pencil"></span> Edytuj
+                </button>
+                  <button type="button" class="btn btn-default btn-sm">
+                  <span class="fa fa-trash"></span> Usuń
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="film">
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <div class="filmCover">
+                <img src="http://1.fwcdn.pl/po/10/49/671049/7808454.6.jpg" class="img-responsive" alt="Responsive image" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="filmInfo">
+                <h5>Tytuł: Gwiezdne Wojny: Ostatni Jedi</h5> Reżyser: <b>Rian Jonson</b>
+                <br> Gatunek: <b>Przygodowy, Sci-Fi</b>
+                <br> Kraj produkcji: <b>USA</b><br> Premiera: <b>14 grudnia 2017</b>
+              </div>
+            </div>
+            <div class="col">
+              <div class="filmActors">
+                <h6>Aktorzy:<br></h6> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <div class="filmButtons">
+                  <button type="button" class="btn btn-default btn-sm">
+                  <span class="fa fa-pencil"></span> Edytuj
+                </button>
+                  <button type="button" class="btn btn-default btn-sm">
+                  <span class="fa fa-trash"></span> Usuń
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="filter">
+        <h3>Filtr</h3>
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Tytuł:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Aktor:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Gatunek:</label>
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+        <option selected>Wybierz...</option>
+        <option value="1">Obyczajowy</option>
+        <option value="2">Przygodowy</option>
+        <option value="3">Horror</option>
+      </select>
+          </div>
+          <button type="submit" class="btn btn-default">Filtruj</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+
+</html>
