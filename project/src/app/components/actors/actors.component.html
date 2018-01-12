@@ -1,22 +1,22 @@
-<h3>Aktorzy</h3>
-<div class="film">
+<h3>Filmy</h3>
+<div class="film" *ngFor="let actor of actors">
   <div class="container">
     <div class="row">
       <div class="col-2">
         <div class="filmCover">
-          <img src="http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg" class="img-responsive" alt="Responsive image" />
+          <img src={{actor.image}} class="img-responsive" alt="Responsive image" />
         </div>
       </div>
       <div class="col">
         <div class="filmInfo">
-          <h5>Tytuł: Ocean's 8</h5> Reżyser: <b>Gary Ross</b>
-          <br> Gatunek: <b>Komedia</b>
-          <br> Kraj produkcji: <b>USA</b><br> Premiera: <b>22 czerwca 2018</b>
+          <h5>Imię: {{actor.name}}</h5> Nazwisko: <b>{{actor.surname}}</b>
+          <br> Data urodzenia: <b>{{actor.birth}}</b>
+          <br> Wzrost: <b>{{actor.height}}</b><br> Nagrody: <b *ngFor="let prize of actor.prizes"><li>{{prize}}</li></b>
         </div>
       </div>
       <div class="col">
         <div class="filmActors">
-          <h6>Aktorzy:<br></h6> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          <h6>Filmy:<br></h6> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           <div class="filmButtons">
             <button type="button" class="btn btn-default btn-sm">
             <span class="fa fa-pencil"></span> Edytuj

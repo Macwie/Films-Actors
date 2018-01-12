@@ -12,6 +12,16 @@ export interface Film {
   genre: string;
 }
 
+export interface Actor {
+  id: string;
+  name: string;
+  surname: string;
+  birth: string;
+  image: string;
+  height: string;
+  prizes: string[];
+}
+
 @Injectable()
 export class DataService {
 
@@ -19,13 +29,12 @@ export class DataService {
     console.log("Ready...")
  }
 
- cars = [
-    'Ford','Chevrolet','Buick'
-  ];
-
  getFilms():Observable<Film[]> {
-   //console.log(this.http.get('http://localhost:3000/films'));
    return this.http.get<Film[]>('http://localhost:3000/films');
+ }
+
+ getActors():Observable<Actor[]> {
+   return this.http.get<Actor[]>('http://localhost:3000/actors');
  }
 
 }

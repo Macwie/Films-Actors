@@ -43,6 +43,7 @@ var actors = [{
     name: "imie",
     surname: "nazwisko",
     birth: "2012-06-07",
+    image: "http://1.fwcdn.pl/p/79/16/7916/389758.1.jpg",
     height: "170 cm",
     prizes: ["nagroda1", "nagroda2"]
   },
@@ -51,6 +52,7 @@ var actors = [{
     name: "imie2",
     surname: "nazwisko2",
     birth: "2009-10-17",
+    image: "http://1.fwcdn.pl/p/79/16/7916/389758.1.jpg",
     height: "150 cm",
     prizes: ["nagroda3", "nagroda4"]
   }

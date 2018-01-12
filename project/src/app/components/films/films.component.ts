@@ -12,12 +12,8 @@ export class FilmsComponent implements OnInit {
   constructor(private mydata:DataService) { }
 
   films:Film[];
-  test:string;
-  cars:any;
 
   ngOnInit() {
-    this.test = "test";
-    this.cars = this.mydata.cars;
     this.mydata.getFilms().subscribe((dane) => this.films = dane);
   }
 
