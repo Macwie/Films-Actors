@@ -7,6 +7,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 //DB id's
 var filmId = 2;
 var actorId = 2;
@@ -18,7 +24,7 @@ var films = [{
     year: "2000",
     country: "kraj",
     director: "reżyser",
-    image: "miniaturka",
+    image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
     genre: "gatunek"
   },
   {
@@ -27,7 +33,7 @@ var films = [{
     year: "2002",
     country: "kraj2",
     director: "reżyser2",
-    image: "miniaturka2",
+    image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
     genre: "gatunek2"
   }
 ];

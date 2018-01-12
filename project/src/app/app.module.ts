@@ -1,11 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './services/data.service';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
 import { FilmsComponent } from './components/films/films.component';
 import { ActorsComponent } from './components/actors/actors.component';
 
+
+const appRoutes = [
+ { path: '', component:FilmsComponent },
+ { path: 'actors', component:ActorsComponent }
+]
 
 @NgModule({
   declarations: [
@@ -14,9 +22,13 @@ import { ActorsComponent } from './components/actors/actors.component';
     ActorsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
