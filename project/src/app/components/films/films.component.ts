@@ -17,5 +17,9 @@ export class FilmsComponent implements OnInit {
     this.mydata.getFilms().subscribe((dane) => this.films = dane);
   }
 
+  remove(id) {
+    this.mydata.removeFilm(id).subscribe((dane) => this.films = dane);
+  }
+
 
 }

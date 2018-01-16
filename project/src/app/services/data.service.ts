@@ -37,4 +37,8 @@ export class DataService {
    return this.http.get<Actor[]>('http://localhost:3000/actors');
  }
 
+ removeFilm(id):Observable<Film[]> {
+   return this.http.delete<Film[]>('http://localhost:3000/films/'+id);
+ }
+
 }
