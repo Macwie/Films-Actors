@@ -17,4 +17,8 @@ export class ActorsComponent implements OnInit {
     this.mydata.getActors().subscribe((dane) => this.actors = dane);
   }
 
+  remove(id) {
+    this.mydata.removeActor(id).subscribe((dane) => this.actors = dane);
+  }
+
 }

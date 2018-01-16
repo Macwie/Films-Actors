@@ -1,4 +1,4 @@
-<h3>Filmy</h3>
+<h3>Aktorzy</h3>
 <div class="film" *ngFor="let actor of actors">
   <div class="container">
     <div class="row">
@@ -21,7 +21,7 @@
             <button type="button" class="btn btn-default btn-sm">
             <span class="fa fa-pencil"></span> Edytuj
           </button>
-            <button type="button" class="btn btn-default btn-sm">
+            <button type="button" class="btn btn-default btn-sm" (click)="remove(actor.id)">
             <span class="fa fa-trash"></span> Usuń
           </button>
           </div>

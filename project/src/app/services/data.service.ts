@@ -25,20 +25,25 @@ export interface Actor {
 @Injectable()
 export class DataService {
 
-  constructor(private http:HttpClient) {
+  constructor(private http: HttpClient) {
     console.log("Ready...")
- }
+  }
 
- getFilms():Observable<Film[]> {
-   return this.http.get<Film[]>('http://localhost:3000/films');
- }
+  getFilms(): Observable<Film[]> {
+    return this.http.get<Film[]>('http://localhost:3000/films');
+  }
 
- getActors():Observable<Actor[]> {
-   return this.http.get<Actor[]>('http://localhost:3000/actors');
- }
+  removeFilm(id): Observable<Film[]> {
+    return this.http.delete<Film[]>('http://localhost:3000/films/' + id);
+  }
 
- removeFilm(id):Observable<Film[]> {
-   return this.http.delete<Film[]>('http://localhost:3000/films/'+id);
- }
+  getActors(): Observable<Actor[]> {
+    return this.http.get<Actor[]>('http://localhost:3000/actors');
+  }
+
+  removeActor(id): Observable<Actor[]> {
+    return this.http.delete<Actor[]>('http://localhost:3000/actors/' + id);
+  }
+
 
 }
