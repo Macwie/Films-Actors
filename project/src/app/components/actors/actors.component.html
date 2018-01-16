@@ -1,32 +1,63 @@
-<h3>Aktorzy</h3>
-<div class="film" *ngFor="let actor of actors">
-  <div class="container">
-    <div class="row">
-      <div class="col-2">
-        <div class="filmCover">
-          <img src={{actor.image}} class="img-responsive" alt="Responsive image" />
-        </div>
-      </div>
-      <div class="col">
-        <div class="filmInfo">
-          <h5>Imię: {{actor.name}}</h5> Nazwisko: <b>{{actor.surname}}</b>
-          <br> Data urodzenia: <b>{{actor.birth}}</b>
-          <br> Wzrost: <b>{{actor.height}}</b><br> Nagrody: <b *ngFor="let prize of actor.prizes"><li>{{prize}}</li></b>
-        </div>
-      </div>
-      <div class="col">
-        <div class="filmActors">
-          <h6>Filmy:<br></h6> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-          <div class="filmButtons">
-            <button type="button" class="btn btn-default btn-sm">
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <h3>Aktorzy</h3>
+      <div class="film" *ngFor="let actor of actors">
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <div class="filmCover">
+                <img src={{actor.image}} class="img-responsive" alt="Responsive image" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="filmInfo">
+                <h5>Imię: {{actor.name}}</h5> Nazwisko: <b>{{actor.surname}}</b>
+                <br> Data urodzenia: <b>{{actor.birth}}</b>
+                <br> Wzrost: <b>{{actor.height}}</b><br> Nagrody: <b *ngFor="let prize of actor.prizes"><li>{{prize}}</li></b>
+              </div>
+            </div>
+            <div class="col">
+              <div class="filmActors">
+                <h6>Filmy:<br></h6>
+                <li *ngFor="let film of actor.films">{{film.title}}</li>
+                <div class="filmButtons">
+                  <button type="button" class="btn btn-default btn-sm">
             <span class="fa fa-pencil"></span> Edytuj
           </button>
-            <button type="button" class="btn btn-default btn-sm" (click)="remove(actor.id)">
+                  <button type="button" class="btn btn-default btn-sm" (click)="remove(actor.id)">
             <span class="fa fa-trash"></span> Usuń
           </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="col-3">
+      <div class="filter">
+        <h3>Filtr</h3>
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Tytuł filmu:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Aktor:</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Gatunek:</label>
+            <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+    <option selected>Wybierz...</option>
+    <option value="1">Obyczajowy</option>
+    <option value="2">Przygodowy</option>
+    <option value="3">Horror</option>
+  </select>
+          </div>
+          <button type="submit" class="btn btn-default">Filtruj</button>
+        </form>
+      </div>
+    </div>
   </div>
-</div>

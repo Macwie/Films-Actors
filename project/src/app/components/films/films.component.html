@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
 <h3>Filmy</h3>
 <div class="film" *ngFor="let film of films">
   <div class="container">
@@ -16,7 +19,8 @@
       </div>
       <div class="col">
         <div class="filmActors">
-          <h6>Aktorzy:<br></h6> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          <h6>Aktorzy:<br></h6>
+            <li *ngFor="let actor of film.actors">{{actor.name}} {{actor.surname}}</li>
           <div class="filmButtons">
             <button type="button" class="btn btn-default btn-sm">
             <span class="fa fa-pencil"></span> Edytuj
@@ -29,4 +33,31 @@
       </div>
     </div>
   </div>
+</div>
+</div>
+<div class="col-3">
+  <div class="filter">
+    <h3>Filtr</h3>
+    <form (ngSubmit)="filter(title.value, title.actor, title.genre)">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Tytuł filmu:</label>
+        <input type="text" class="form-control" #title>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Aktor:</label>
+        <input type="text" class="form-control" #actor>
+      </div>
+      <div class="form-group">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Gatunek:</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" #genre>
+    <option selected>Wybierz...</option>
+    <option value="1">Obyczajowy</option>
+    <option value="2">Przygodowy</option>
+    <option value="3">Horror</option>
+  </select>
+      </div>
+      <button type="submit" class="btn btn-default">Filtruj</button>
+    </form>
+  </div>
+</div>
 </div>

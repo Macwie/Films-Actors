@@ -12,6 +12,7 @@ export class FilmsComponent implements OnInit {
   constructor(private mydata:DataService) { }
 
   films:Film[];
+  mem:Film[];
 
   ngOnInit() {
     this.mydata.getFilms().subscribe((dane) => this.films = dane);
@@ -19,6 +20,15 @@ export class FilmsComponent implements OnInit {
 
   remove(id) {
     this.mydata.removeFilm(id).subscribe((dane) => this.films = dane);
+  }
+
+  filter(title, actor, genre) {
+    var temp = [];
+    for(var i=0;i<this.films.length;i++) {
+      if(title.length > 0 && this.films[i].title === title)
+        temp.push(this.films[i]);
+    }
+    this.films = temp;
   }
 
 

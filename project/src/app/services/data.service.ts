@@ -10,6 +10,12 @@ export interface Film {
   director: string;
   image: string;
   genre: string;
+  actors: string[];
+}
+
+export interface Connector {
+  filmId: string;
+  actorId: string;
 }
 
 export interface Actor {
@@ -20,6 +26,7 @@ export interface Actor {
   image: string;
   height: string;
   prizes: string[];
+  films: string[];
 }
 
 @Injectable()

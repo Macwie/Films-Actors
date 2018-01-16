@@ -17,6 +17,7 @@ app.use(function(req, res, next) {
 //DB id's
 var filmId = 2;
 var actorId = 2;
+var connectorId = 2;
 
 //DB
 var films = [{
@@ -26,7 +27,9 @@ var films = [{
     country: "kraj",
     director: "reżyser",
     image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-    genre: "gatunek"
+    genre: "gatunek",
+    actors: []
+
   },
   {
     id: 2,
@@ -35,7 +38,18 @@ var films = [{
     country: "kraj2",
     director: "reżyser2",
     image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-    genre: "gatunek2"
+    genre: "gatunek2",
+    actors: []
+  }
+];
+
+var connector = [{
+    filmId: 1,
+    actorId: 1
+  },
+  {
+    filmId: 2,
+    actorId: 2
   }
 ];
 
@@ -46,7 +60,8 @@ var actors = [{
     birth: "2012-06-07",
     image: "http://1.fwcdn.pl/p/79/16/7916/389758.1.jpg",
     height: "170 cm",
-    prizes: ["nagroda1", "nagroda2"]
+    prizes: ["nagroda1", "nagroda2"],
+    films: []
   },
   {
     id: 2,
@@ -55,11 +70,29 @@ var actors = [{
     birth: "2009-10-17",
     image: "http://1.fwcdn.pl/p/79/16/7916/389758.1.jpg",
     height: "150 cm",
-    prizes: ["nagroda3", "nagroda4"]
+    prizes: ["nagroda3", "nagroda4"],
+    films: []
   }
 ];
 
 // <-------films webservices------>
+
+//Make connections
+  for(var i=0;i<films.length;i++){
+    for(var j=0;j<connector.length;j++){
+      if(connector[j].filmId == films[i].id) {
+        films[i].actors.push({id: actors[connector[j].actorId-1].id, name: actors[connector[j].actorId-1].name, surname: actors[connector[j].actorId-1].surname});
+      }
+    }
+  }
+
+  for(var i=0;i<actors.length;i++){
+    for(var j=0;j<connector.length;j++){
+      if(connector[j].actorId == actors[i].id) {
+        actors[i].films.push({id: films[connector[j].filmId-1].id, title: films[connector[j].filmId-1].title});
+      }
+    }
+  }
 
 //Get all films
 app.get('/films', function(req, res) {
