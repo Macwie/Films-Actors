@@ -54,4 +54,27 @@ export class FilmsComponent implements OnInit {
   }
 
 
+  sortFilmByYear(){
+    this.films.sort(function(a, b){
+    var FilmA=a.year.toLowerCase(), FilmB=b.year.toLowerCase()
+    if (FilmA < FilmB) //sort string ascending
+        return -1
+    if (FilmA > FilmB)
+        return 1
+    return 0 //default return value (no sorting)
+  })
+  }
+
+  sortFilmByTitle(){
+    this.films.sort(function(a, b){
+    var FilmA=a.title.toLowerCase(), FilmB=b.title.toLowerCase()
+    if (FilmA < FilmB) //sort string ascending
+        return -1
+    if (FilmA > FilmB)
+        return 1
+    return 0 //default return value (no sorting)
+  })
+  }
+
+
 }
