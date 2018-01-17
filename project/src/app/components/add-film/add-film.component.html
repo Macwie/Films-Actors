@@ -1,0 +1,48 @@
+<div class="container">
+<h3 class="addFilm">Dodaj film</h3>
+<div class="container">
+      <form (ngSubmit)="filter(title.value, actor.value, genre.value)">
+        <div class="row">
+    <div class="col-6" style="margin-top: 10px">
+      <div class="filter">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Tytuł:</label>
+            <input type="text" class="form-control" #title>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Premiera:</label>
+            <input type="text" class="form-control" #actor>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Kraj produkcji:</label>
+            <input type="text" class="form-control" #title>
+          </div>
+          <div class="form-group">
+          <label for="exampleFormControlInput1">Aktorzy którzy grają w filmie:</label><br>
+          <select multiple class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" #genre>
+      <option selected>Wybierz...</option>
+      <option value="Obyczajowy">Obyczajowy</option>
+      <option value="Przygodowy">Przygodowy</option>
+      <option value="Horror">Horror</option>
+    </select></div>
+          <button type="submit" class="btn btn-default">Dodaj</button>
+      </div>
+    </div>
+    <div class="col-6" style="margin-top: 10px">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Reżyser:</label>
+        <input type="text" class="form-control" #title>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Okładka:</label>
+        <input type="text" class="form-control" #title>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Gatunek:</label>
+        <input type="text" class="form-control" #title>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>
+</div>

@@ -12,7 +12,6 @@ export class FilmsComponent implements OnInit {
   constructor(private mydata: DataService) { }
 
   films: Film[];
-  mem: Film[];
 
   ngOnInit() {
     this.mydata.getFilms().subscribe((dane) => this.films = dane);

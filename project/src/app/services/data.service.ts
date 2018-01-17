@@ -8,6 +8,11 @@ interface actorDummy {
   surname: string;
 }
 
+interface filmDummy {
+  id: string;
+  title: string;
+}
+
 export interface Film {
   id: string;
   title: string;
@@ -32,7 +37,7 @@ export interface Actor {
   image: string;
   height: string;
   prizes: string[];
-  films: string[];
+  films: filmDummy[];
 }
 
 @Injectable()

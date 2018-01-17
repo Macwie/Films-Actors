@@ -9,9 +9,9 @@ import { Actor } from '../../services/data.service'
 })
 export class ActorsComponent implements OnInit {
 
-  constructor(private mydata:DataService) { }
+  constructor(private mydata: DataService) { }
 
-  actors:Actor[];
+  actors: Actor[];
 
   ngOnInit() {
     this.mydata.getActors().subscribe((dane) => this.actors = dane);
@@ -19,6 +19,30 @@ export class ActorsComponent implements OnInit {
 
   remove(id) {
     this.mydata.removeActor(id).subscribe((dane) => this.actors = dane);
+  }
+
+  filter(actor, film) {
+    var temp = [];
+
+    if (actor) {    //sort by actor
+      var split = actor.split(" ");
+      for (var i = 0; i < this.actors.length; i++) {
+        if (this.actors[i].name === split[0] && this.actors[i].surname === split[1]) {
+          temp.push(this.actors[i]);
+        }
+      }
+    }
+
+    if (film) {    //sort by film
+      for (var i = 0; i < this.actors.length; i++) {
+        for (var j = 0; j < this.actors[i].films.length; j++) {
+          if (this.actors[i].films[j].title === film)
+            temp.push(this.actors[i]);
+        }
+      }
+    }
+    this.actors = temp;
+
   }
 
 }

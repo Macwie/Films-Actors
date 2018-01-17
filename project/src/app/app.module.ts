@@ -9,18 +9,24 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FilmsComponent } from './components/films/films.component';
 import { ActorsComponent } from './components/actors/actors.component';
+import { AddFilmComponent } from './components/add-film/add-film.component';
+import { AddActorComponent } from './components/add-actor/add-actor.component';
 
 
 const appRoutes = [
  { path: '', component:FilmsComponent },
- { path: 'actors', component:ActorsComponent }
+ { path: 'actors', component:ActorsComponent },
+ { path: 'add_film', component:AddFilmComponent },
+ { path: 'add_actor', component:AddActorComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponent,
-    ActorsComponent
+    ActorsComponent,
+    AddFilmComponent,
+    AddActorComponent
   ],
   imports: [
     BrowserModule,
