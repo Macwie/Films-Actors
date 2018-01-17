@@ -8,7 +8,7 @@ export interface actorDummy {
   surname: string;
 }
 
-interface filmDummy {
+export interface filmDummy {
   id: string;
   title: string;
 }
@@ -65,6 +65,10 @@ export class DataService {
 
   removeActor(id): Observable<Actor[]> {
     return this.http.delete<Actor[]>('http://localhost:3000/actors/' + id);
+  }
+
+  addActor(actor): Observable<Actor> {
+    return this.http.post<Actor>('http://localhost:3000/actors/', actor);
   }
 
 
