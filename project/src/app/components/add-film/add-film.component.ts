@@ -29,6 +29,7 @@ export class AddFilmComponent implements OnInit {
 
   addFilm(form: NgForm) {
     console.log(form.controls['actors'].value);
+    console.log(this.actors);
     console.log(form.controls['country'].value);
     console.log(form.controls['title'].value);
     console.log(form.controls['year'].value);
@@ -40,7 +41,7 @@ export class AddFilmComponent implements OnInit {
     console.log(this.actors[1].name);
     console.log(this.actors[1].surname);
 
-    this.film = {id: "0", title: this.title, year: this.year, country: this.country, director: this.director, image: this.image, genre: this.genre, actors: this.actors};
+    this.film = {id: "0", title: this.title, year: this.year, country: this.country, director: this.director, image: this.image, genre: this.genre, actors: form.controls['actors'].value};
     this.mydata.addFilm(this.film).subscribe();
   }
 

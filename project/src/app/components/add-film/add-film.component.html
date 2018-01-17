@@ -26,9 +26,9 @@
 
 
 
-        <select multiple name="actors" [(ngModel)]="actor">
+        <select multiple name="actors" [(ngModel)]="actor" class="custom-select mb-2 mr-sm-2 mb-sm-0">
         <option *ngFor="let actor of actors" [ngValue]="actor">
-             {{ actor.name }}
+             {{ actor.name }} {{ actor.surname }}
         </option>
   </select>
 

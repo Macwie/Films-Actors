@@ -55,8 +55,8 @@ var connector = [{
 
 var actors = [{
     id: 1,
-    name: "imie",
-    surname: "nazwisko",
+    name: "kimie",
+    surname: "znazwisko",
     birth: "2012-06-07",
     image: "http://1.fwcdn.pl/p/79/16/7916/389758.1.jpg",
     height: "170 cm",
