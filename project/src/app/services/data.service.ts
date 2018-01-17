@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
-interface actorDummy {
+export interface actorDummy {
   id: string;
   name: string;
   surname: string;
@@ -54,7 +54,7 @@ export class DataService {
   removeFilm(id): Observable<Film[]> {
     return this.http.delete<Film[]>('http://localhost:3000/films/' + id);
   }
-  
+
   addFilm(film): Observable<Film> {
     return this.http.post<Film>('http://localhost:3000/films/', film);
   }
