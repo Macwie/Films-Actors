@@ -38,7 +38,7 @@
 <div class="col-3">
   <div class="filter">
     <h3>Filtr</h3>
-    <form (ngSubmit)="filter(title.value, title.actor, title.genre)">
+    <form (ngSubmit)="filter(title.value, actor.value, genre.value)">
       <div class="form-group">
         <label for="exampleFormControlInput1">Tytuł filmu:</label>
         <input type="text" class="form-control" #title>
@@ -51,9 +51,9 @@
         <label class="mr-sm-2" for="inlineFormCustomSelect">Gatunek:</label>
         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" #genre>
     <option selected>Wybierz...</option>
-    <option value="1">Obyczajowy</option>
-    <option value="2">Przygodowy</option>
-    <option value="3">Horror</option>
+    <option value="Obyczajowy">Obyczajowy</option>
+    <option value="Przygodowy">Przygodowy</option>
+    <option value="Horror">Horror</option>
   </select>
       </div>
       <button type="submit" class="btn btn-default">Filtruj</button>

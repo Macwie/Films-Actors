@@ -27,7 +27,7 @@ var films = [{
     country: "kraj",
     director: "reżyser",
     image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-    genre: "gatunek",
+    genre: "Komedia",
     actors: []
 
   },
@@ -38,7 +38,7 @@ var films = [{
     country: "kraj2",
     director: "reżyser2",
     image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-    genre: "gatunek2",
+    genre: "Obyczajowy",
     actors: []
   }
 ];

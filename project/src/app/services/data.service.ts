@@ -2,6 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
+interface actorDummy {
+  id: string;
+  name: string;
+  surname: string;
+}
+
 export interface Film {
   id: string;
   title: string;
@@ -10,7 +16,7 @@ export interface Film {
   director: string;
   image: string;
   genre: string;
-  actors: string[];
+  actors: actorDummy[];
 }
 
 export interface Connector {
