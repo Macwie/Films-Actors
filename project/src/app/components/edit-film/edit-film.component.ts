@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-edit-film',
   templateUrl: './edit-film.component.html',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditFilmComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) {
+  this.activatedRoute.queryParams.subscribe(params => {
+        let date = params['id'];
+        console.log(date); // Print the parameter to the console.
+    });
+}
 
   ngOnInit() {
   }

@@ -20,8 +20,8 @@ const appRoutes = [
  { path: 'actors', component:ActorsComponent },
  { path: 'add_film', component:AddFilmComponent },
  { path: 'add_actor', component:AddActorComponent },
- { path: 'edit_film', component:EditFilmComponent },
- { path: 'edit_actor', component:EditActorComponent }
+ { path: 'edit_actor/:id', component:EditActorComponent },
+ { path: 'edit_film?id=:id', component:EditFilmComponent }
 
 
 ]
