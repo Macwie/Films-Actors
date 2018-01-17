@@ -22,7 +22,7 @@
                 <h6>Filmy:<br></h6>
                 <li *ngFor="let film of actor.films">{{film.title}}</li>
                 <div class="filmButtons">
-                  <button type="button" class="btn btn-default btn-sm">
+                  <button type="button" class="btn btn-default btn-sm" routerLink="/edit_actor">
             <span class="fa fa-pencil"></span> Edytuj
           </button>
                   <button type="button" class="btn btn-default btn-sm" (click)="remove(actor.id)">
