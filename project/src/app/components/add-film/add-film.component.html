@@ -1,37 +1,29 @@
 <div class="container">
 <h3 class="addFilm">Dodaj film</h3>
 <div class="container">
-        <form #userForm="ngForm" (ngSubmit)="addFilm(userForm)">
+      <form (ngSubmit)="addFilm($event)">
         <div class="row">
     <div class="col-6" style="margin-top: 10px">
       <div class="filter">
           <div class="form-group">
             <label for="exampleFormControlInput1">Tytuł:</label>
-            <input type="text" class="form-control" name="title" [(ngModel)]="title">
+            <input type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Premiera:</label>
-            <input type="text" class="form-control"  name="year" [(ngModel)]="year">
+            <input type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Kraj produkcji:</label>
-            <input type="text" class="form-control" name="country" [(ngModel)]="country">
+            <input type="text" class="form-control">
           </div>
-
-
-
           <div class="form-group">
-          <label for="exampleFormControlInput1" >Aktorzy którzy grają w filmie:</label><br>
-
-
-
-
-        <select multiple name="actors" [(ngModel)]="actor">
-        <option *ngFor="let actor of actors" [ngValue]="actor">
-             {{ actor.name }}
+          <label for="exampleFormControlInput1">Aktorzy którzy grają w filmie:</label><br>
+        <select multiple="true" class="custom-select mb-2 mr-sm-2 mb-sm-0" name="aktorzy">
+        <option *ngFor="let actor of actors" value={{actor.name}}>
+        {{actor.name}} {{actor.surname}}
         </option>
-  </select>
-
+        </select>
           </div>
           <button type="submit" class="btn btn-default">Dodaj</button>
       </div>
@@ -39,15 +31,15 @@
     <div class="col-6" style="margin-top: 10px">
       <div class="form-group">
         <label for="exampleFormControlInput1">Reżyser:</label>
-        <input type="text" class="form-control"  name="director" [(ngModel)]="director">
+        <input type="text" class="form-control">
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Okładka:</label>
-        <input type="text" class="form-control"  name="image" [(ngModel)]="image">
+        <input type="text" class="form-control">
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Gatunek:</label>
-        <input type="text" class="form-control"  name="genre" [(ngModel)]="genre">
+        <input type="text" class="form-control">
       </div>
     </div>
     </div>

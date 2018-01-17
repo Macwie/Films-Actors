@@ -22,8 +22,8 @@ var connectorId = 2;
 //DB
 var films = [{
     id: 1,
-    title: "A",
-    year: "2010",
+    title: "Tytuł",
+    year: "2000",
     country: "kraj",
     director: "reżyser",
     image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
@@ -33,47 +33,14 @@ var films = [{
   },
   {
     id: 2,
-    title: "Z",
+    title: "Tytuł2",
     year: "2002",
     country: "kraj2",
     director: "reżyser2",
     image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
     genre: "Obyczajowy",
     actors: []
-  },
-  {
-      id: 3,
-      title: "C",
-      year: "2005",
-      country: "kraj",
-      director: "reżyser",
-      image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-      genre: "Komedia",
-      actors: []
-
-    },
-    {
-        id: 4,
-        title: "B",
-        year: "2020",
-        country: "kraj",
-        director: "reżyser",
-        image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-        genre: "Komedia",
-        actors: []
-
-      },
-      {
-          id: 5,
-          title: "A",
-          year: "1999",
-          country: "kraj",
-          director: "reżyser",
-          image: "http://1.fwcdn.pl/po/74/44/757444/7819422.6.jpg",
-          genre: "Komedia",
-          actors: []
-
-        },
+  }
 ];
 
 var connector = [{
