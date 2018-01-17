@@ -117,6 +117,9 @@ app.post('/films', function(req, res) {
   console.log('Adding film: ' + JSON.stringify(film));
   film.id = ++filmId;
   films.push(film);
+  for(var i=0;i<film.actors.length;i++) {
+    connector.push({filmId: film.id, actorId: film.actors[i].id});
+  }
   res.send(film);
 });
 
