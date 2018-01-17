@@ -45,4 +45,26 @@ export class ActorsComponent implements OnInit {
 
   }
 
+  sortActorByName(){
+    this.actors.sort(function(a, b){
+    var ActorA=a.name.toLowerCase(), ActorB=b.name.toLowerCase()
+    if (ActorA < ActorB) //sort string ascending
+        return -1
+    if (ActorA > ActorB)
+        return 1
+    return 0 //default return value (no sorting)
+  })
+  }
+
+  sortActorBySurname(){
+    this.actors.sort(function(a, b){
+    var ActorA=a.surname.toLowerCase(), ActorB=b.surname.toLowerCase()
+    if (ActorA < ActorB) //sort string ascending
+        return -1
+    if (ActorA > ActorB)
+        return 1
+    return 0 //default return value (no sorting)
+  })
+  }
+
 }
