@@ -71,12 +71,20 @@ export class DataService {
     return this.http.get<Actor[]>('http://localhost:3000/actors');
   }
 
+  getActor(id): Observable<Actor> {
+    return this.http.get<Actor>('http://localhost:3000/actors/' + id);
+  }
+
   removeActor(id): Observable<Actor[]> {
     return this.http.delete<Actor[]>('http://localhost:3000/actors/' + id);
   }
 
   addActor(actor): Observable<Actor> {
     return this.http.post<Actor>('http://localhost:3000/actors/', actor);
+  }
+
+  editActor(actor, id): Observable<Actor> {
+    return this.http.put<Actor>('http://localhost:3000/actors/' + id, actor);
   }
 
 
