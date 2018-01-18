@@ -21,7 +21,7 @@ const appRoutes = [
  { path: 'add_film', component:AddFilmComponent },
  { path: 'add_actor', component:AddActorComponent },
  { path: 'edit_actor/:id', component:EditActorComponent },
- { path: 'edit_film?id=:id', component:EditFilmComponent }
+ { path: 'edit_film/:id', component:EditFilmComponent }
 
 
 ]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Film } from '../../services/data.service'
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-films',
@@ -9,7 +10,7 @@ import { Film } from '../../services/data.service'
 })
 export class FilmsComponent implements OnInit {
 
-  constructor(private mydata: DataService) { }
+  constructor(private router: Router, private mydata: DataService) { }
 
   films: Film[];
 

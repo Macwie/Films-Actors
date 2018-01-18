@@ -51,6 +51,14 @@ export class DataService {
     return this.http.get<Film[]>('http://localhost:3000/films');
   }
 
+  getFilm(id): Observable<Film> {
+    return this.http.get<Film>('http://localhost:3000/films/' + id);
+  }
+
+  editFilm(film, id): Observable<Film> {
+    return this.http.put<Film>('http://localhost:3000/films/' + id, film);
+  }
+
   removeFilm(id): Observable<Film[]> {
     return this.http.delete<Film[]>('http://localhost:3000/films/' + id);
   }
